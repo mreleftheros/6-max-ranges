@@ -14,7 +14,8 @@ export default class Grid {
 
   render() {
     const gridElement = document.createElement("div");
-    gridElement.className = `grids-container__grid grid-${gridIndex}`;
+    gridElement.classList.add("grids-container__grid");
+    gridElement.setAttribute("data-index", gridIndex);
     gridIndex++;
 
     const fragment = new DocumentFragment();

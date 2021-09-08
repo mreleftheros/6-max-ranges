@@ -19,6 +19,7 @@ export default () => {
 export const updateBtn = e => {
   if (e.target.tagName !== "BUTTON") return; // check
 
+  let gridIndex = e.target.parentElement.parentElement.getAttribute("data-index");
   let text = e.target.textContent;
   let color;
 
@@ -37,6 +38,6 @@ export const updateBtn = e => {
 
   e.target.classList.add(color);
 
-  // save button to localStorage
-  saveToLocalStorage(text, color);
+  // save to localStorage
+  saveToLocalStorage(text, gridIndex, color);
 };
