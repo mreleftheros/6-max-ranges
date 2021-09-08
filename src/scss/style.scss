@@ -27,16 +27,19 @@
 
       .red {
         background: crimson;
+        color: #fff;
       }
 
       .blue {
         background: blue;
+        color: #fff;
       }
 
       &__btn {
-        font-size: .75rem;
+        font-size: 1.01rem;
         border-radius: .5rem;
         cursor: pointer;
+        border: none;
 
         &:hover {
           opacity: .8;

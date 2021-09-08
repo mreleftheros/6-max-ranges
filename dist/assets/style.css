@@ -41,14 +41,17 @@ body {
 }
 .grids-container__grid__buttons .red {
   background: crimson;
+  color: #fff;
 }
 .grids-container__grid__buttons .blue {
   background: blue;
+  color: #fff;
 }
 .grids-container__grid__buttons__btn {
-  font-size: 0.75rem;
+  font-size: 1.01rem;
   border-radius: 0.5rem;
   cursor: pointer;
+  border: none;
 }
 .grids-container__grid__buttons__btn:hover {
   opacity: 0.8;
