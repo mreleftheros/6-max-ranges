@@ -1,5 +1,5 @@
 // function which checks localStorage and returns an array with items or empty array
-const getFromLocalStorage = () => {
+const getButtonsFromLocalStorage = () => {
   let buttons;
 
   if (localStorage.getItem("buttons")) {
@@ -12,8 +12,8 @@ const getFromLocalStorage = () => {
 };
 
 // function which takes text and color and sets it to the localStorage
-export default (text, color) => {
-  let buttons = getFromLocalStorage();
+export const saveToLocalStorage = (text, color) => {
+  let buttons = getButtonsFromLocalStorage();
   let buttonIndex = buttons.findIndex(button => button.name === text);
 
   if (buttonIndex !== -1) { // exists
@@ -24,4 +24,11 @@ export default (text, color) => {
   }
 
   localStorage.setItem("buttons", JSON.stringify(buttons));
+};
+
+// function that checks localStorage for item with name equal to text given and returns the item if found or undefined
+export const getItemFromLocalStorage = text => {
+  let buttons = getButtonsFromLocalStorage();
+
+  return buttons.find(button => button.name === text)
 };

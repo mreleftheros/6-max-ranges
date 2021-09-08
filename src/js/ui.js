@@ -1,5 +1,5 @@
 import Grid from "./grid";
-import saveToLocalStorage from "./storage";
+import { saveToLocalStorage } from "./storage";
 
 // global variables
 const gridTitles = ["LJ opening range", "HJ opening range", "CO opening range", "BTN opening range", "SB opening range", "", "HJ defending range", "CO defending range", "BTN defending range", "SB defending range"];
