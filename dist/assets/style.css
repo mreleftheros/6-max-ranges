@@ -22,20 +22,32 @@ body {
   height: 100vh;
 }
 .grids-container__grid {
+  display: flex;
+  flex-direction: column;
   flex-basis: 20vw;
   height: 50vh;
   padding: 1px;
   box-shadow: 0px 0px 3px #000;
+}
+.grids-container__grid__buttons {
+  flex: 10;
   display: grid;
   grid-gap: 0.1rem;
   grid-template-columns: repeat(13, 1fr);
   grid-template-rows: repeat(13, 1fr);
 }
-.grids-container__grid .white {
+.grids-container__grid__buttons .white {
   background: #d8d8d5;
 }
-.grids-container__grid__btn {
+.grids-container__grid__buttons__btn {
   font-size: 0.63rem;
   background: none;
   border-radius: 0.5rem;
+}
+.grids-container__grid__title {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
 }

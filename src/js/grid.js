@@ -12,19 +12,31 @@ export default class Grid {
     const gridElement = document.createElement("div");
     gridElement.classList.add("grids-container__grid");
 
+    const fragment = new DocumentFragment();
+
+    const gridButtons = document.createElement("div");
+    gridButtons.classList.add("grids-container__grid__buttons");
+    
+    const gridTitleElement = document.createElement("div");
+    gridTitleElement.classList.add("grids-container__grid__title");
+    gridTitleElement.textContent = this.title;
+
     for (let i = 0, cLen = this.columns; i < cLen; i++) {
       for (let j = 0, rLen = this.rows, suffix; j < rLen; j++) {
         const btnElement = document.createElement("button");
         suffix = i < j ? "s": i > j ? "o": "";
 
         btnElement.setAttribute("type", "button");
-        btnElement.classList.add("grids-container__grid__btn");
+        btnElement.classList.add("grids-container__grid__buttons__btn");
 
         btnElement.textContent = `${gridValues[i]}${gridValues[j]}${suffix}`;
 
-        gridElement.appendChild(btnElement);
+        gridButtons.appendChild(btnElement);
       }
     }
+    
+    gridElement.appendChild(gridButtons);
+    gridElement.appendChild(gridTitleElement);
 
     gridsContainer.appendChild(gridElement);
   }
