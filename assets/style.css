@@ -14,3 +14,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
 }
+
+.grids-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+}
+.grids-container__grid {
+  flex-basis: 20vw;
+  height: 50vh;
+  padding: 1px;
+  box-shadow: 0px 0px 3px #000;
+  display: grid;
+  grid-gap: 0.1rem;
+  grid-template-columns: repeat(13, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+}
+.grids-container__grid .white {
+  background: #d8d8d5;
+}
+.grids-container__grid__btn {
+  font-size: 0.63rem;
+  background: none;
+  border-radius: 0.5rem;
+}
