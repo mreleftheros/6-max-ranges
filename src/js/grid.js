@@ -29,12 +29,15 @@ export default class Grid {
         const btnElement = document.createElement("button");
         suffix = i < j ? "s": i > j ? "o": "";
         let text = `${gridValues[i]}${gridValues[j]}${suffix}`;
+        let color;
 
-        getItemFromLocalStorage(text);
+        let item = getItemFromLocalStorage(text);
 
+        color = item ? item.class: "white";
+        
+        btnElement.classList.add(color);
         btnElement.setAttribute("type", "button");
         btnElement.classList.add("grids-container__grid__buttons__btn");
-        btnElement.classList.add("white");
 
         btnElement.textContent = text;
 
