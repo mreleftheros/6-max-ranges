@@ -16,7 +16,6 @@ export default class Grid {
     const gridElement = document.createElement("div");
     gridElement.classList.add("grids-container__grid");
     gridElement.setAttribute("data-index", gridIndex);
-    gridIndex++;
 
     const fragment = new DocumentFragment();
 
@@ -34,9 +33,9 @@ export default class Grid {
         let text = `${gridValues[i]}${gridValues[j]}${suffix}`;
         let color;
 
-        let item = getItemFromLocalStorage(text);
+        let item = getItemFromLocalStorage(text, gridIndex);
 
-        color = item ? item.class: "white";
+        color = (item && item.class !== "white") ? item.class : "white";
         
         btnElement.classList.add(color);
         btnElement.setAttribute("type", "button");
@@ -47,6 +46,8 @@ export default class Grid {
         fragment.appendChild(btnElement);
       }
     }
+
+    gridIndex++;
     
     gridButtons.appendChild(fragment);
     gridElement.appendChild(gridButtons);

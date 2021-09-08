@@ -27,8 +27,8 @@ export const saveToLocalStorage = (text, gridIndex, color) => {
 };
 
 // function that checks localStorage for item with name equal to text given and returns the item if found or undefined
-export const getItemFromLocalStorage = text => {
+export const getItemFromLocalStorage = (text, gridIndex) => {
   let buttons = getButtonsFromLocalStorage();
 
-  return buttons.find(button => button.name === text)
+  return buttons.find(button => button.name === text && button.grid === String(gridIndex));
 };
