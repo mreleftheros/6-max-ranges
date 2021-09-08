@@ -27,6 +27,7 @@ export default class Grid {
         suffix = i < j ? "s": i > j ? "o": "";
 
         btnElement.setAttribute("type", "button");
+        btnElement.classList.add("white");
         btnElement.classList.add("grids-container__grid__buttons__btn");
 
         btnElement.textContent = `${gridValues[i]}${gridValues[j]}${suffix}`;

@@ -29,6 +29,11 @@
         font-size: .75rem;
         background: none;
         border-radius: .5rem;
+        cursor: pointer;
+
+        &:hover {
+          opacity: .8;
+        }
       }
     }
 
