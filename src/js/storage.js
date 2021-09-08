@@ -12,15 +12,15 @@ const getButtonsFromLocalStorage = () => {
 };
 
 // function which takes text and color and sets it to the localStorage
-export const saveToLocalStorage = (text, color) => {
+export const saveToLocalStorage = (text, gridIndex, color) => {
   let buttons = getButtonsFromLocalStorage();
-  let buttonIndex = buttons.findIndex(button => button.name === text);
+  let buttonIndex = buttons.findIndex(button => (button.name === text) && (button.grid === gridIndex));
 
   if (buttonIndex !== -1) { // exists
     buttons[buttonIndex].class = color;
   }
   else {
-    buttons.push({name: text, class: color});
+    buttons.push({name: text, grid: gridIndex, class: color});
   }
 
   localStorage.setItem("buttons", JSON.stringify(buttons));
