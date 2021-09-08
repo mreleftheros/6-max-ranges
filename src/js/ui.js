@@ -37,5 +37,5 @@ export const updateBtn = e => {
   e.target.classList.add(color);
 
   // save button to localStorage
-  saveBtn(text, color);
-}
+  saveToLocalStorage(text, color);
+};
