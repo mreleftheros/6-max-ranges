@@ -8,7 +8,7 @@ export default class Grid {
     this.rows = rows;
   }
 
-  create() {
+  render() {
     const gridElement = document.createElement("div");
     gridElement.classList.add("grids-container__grid");
 
