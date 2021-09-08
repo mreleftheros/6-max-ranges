@@ -43,6 +43,10 @@ body {
   font-size: 0.75rem;
   background: none;
   border-radius: 0.5rem;
+  cursor: pointer;
+}
+.grids-container__grid__buttons__btn:hover {
+  opacity: 0.8;
 }
 .grids-container__grid__title {
   flex: 1;
