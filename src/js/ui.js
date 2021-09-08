@@ -18,18 +18,24 @@ export default () => {
 export const updateBtn = e => {
   if (e.target.tagName !== "BUTTON") return; // check
 
-  console.log(e.target, e.target.classList.contains("white"));
+  let text = e.target.textContent;
+  let color;
 
   if (e.target.classList.contains("white")) {
+    color = "red";
     e.target.classList.remove("white");
-    e.target.classList.add("red");
   }
   else if (e.target.classList.contains("red")) {
+    color = "blue";
     e.target.classList.remove("red");
-    e.target.classList.add("blue");
   }
   else if (e.target.classList.contains("blue")) {
+    color = "white";
     e.target.classList.remove("blue");
-    e.target.classList.add("white");
   }
+
+  e.target.classList.add(color);
+
+  // save button to localStorage
+  saveBtn(text, color);
 }
