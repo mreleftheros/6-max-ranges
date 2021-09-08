@@ -25,9 +25,16 @@
         background: rgb(216, 216, 213);
       }
 
+      .red {
+        background: crimson;
+      }
+
+      .blue {
+        background: blue;
+      }
+
       &__btn {
         font-size: .75rem;
-        background: none;
         border-radius: .5rem;
         cursor: pointer;
 

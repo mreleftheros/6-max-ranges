@@ -1,6 +1,7 @@
 const gridValues = ["A", "K", "Q", "J", "T", 9, 8, 7, 6, 5, 4, 3, 2];
-const gridsContainer = document.getElementById("gridsContainer");
+export const gridsContainer = document.getElementById("gridsContainer");
 
+// Grid class
 export default class Grid {
   constructor(title, columns, rows) {
     this.title = title;

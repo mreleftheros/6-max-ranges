@@ -39,9 +39,14 @@ body {
 .grids-container__grid__buttons .white {
   background: #d8d8d5;
 }
+.grids-container__grid__buttons .red {
+  background: crimson;
+}
+.grids-container__grid__buttons .blue {
+  background: blue;
+}
 .grids-container__grid__buttons__btn {
   font-size: 0.75rem;
-  background: none;
   border-radius: 0.5rem;
   cursor: pointer;
 }
