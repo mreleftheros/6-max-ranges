@@ -4,6 +4,7 @@ import { saveToLocalStorage } from "./storage";
 // global variables
 const gridTitles = ["LJ opening range", "HJ opening range", "CO opening range", "BTN opening range", "SB opening range", "", "HJ defending range", "CO defending range", "BTN defending range", "SB defending range"];
 let grids = [];
+export const resetBtn = document.getElementById("resetBtn");
 
 // function which initializes 10 grids
 export default () => {
@@ -41,3 +42,13 @@ export const updateBtn = e => {
   // save to localStorage
   saveToLocalStorage(text, gridIndex, color);
 };
+
+// function that clears localStorage
+export const clearLocalStorage = () => {
+  let yesOrNo = confirm("Are you sure?");
+
+  if (yesOrNo) {
+    localStorage.clear();
+    location.reload();
+  }
+}

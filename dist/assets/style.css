@@ -63,3 +63,40 @@ body {
   align-items: center;
   font-size: 1.5rem;
 }
+
+.reset {
+  position: fixed;
+  top: 46.5%;
+  right: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: none;
+  background: black;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.reset:hover {
+  transform: rotate(180deg);
+}
+.reset::before {
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  z-index: 2;
+}
+.reset::after {
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  left: 50%;
+  transform: translate(-50%);
+  width: 0.1rem;
+  height: 0.5rem;
+  background: #fff;
+}
