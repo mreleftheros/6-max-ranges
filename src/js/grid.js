@@ -31,13 +31,13 @@ export default class Grid {
 
         btnElement.textContent = `${gridValues[i]}${gridValues[j]}${suffix}`;
 
-        gridButtons.appendChild(btnElement);
+        fragment.appendChild(btnElement);
       }
     }
     
+    gridButtons.appendChild(fragment);
     gridElement.appendChild(gridButtons);
     gridElement.appendChild(gridTitleElement);
-
     gridsContainer.appendChild(gridElement);
   }
 }
