@@ -1,6 +1,7 @@
 import { getItemFromLocalStorage } from "./storage";
 
 const gridValues = ["A", "K", "Q", "J", "T", 9, 8, 7, 6, 5, 4, 3, 2];
+let gridIndex = 0;
 export const gridsContainer = document.getElementById("gridsContainer");
 
 // Grid class
@@ -13,7 +14,8 @@ export default class Grid {
 
   render() {
     const gridElement = document.createElement("div");
-    gridElement.classList.add("grids-container__grid");
+    gridElement.className = `grids-container__grid grid-${gridIndex}`;
+    gridIndex++;
 
     const fragment = new DocumentFragment();
 
